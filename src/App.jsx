@@ -1,45 +1,70 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import './rate.css'
+import iconStar from './icon-star.svg'
+import {useState} from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+function ratingPage() {
+
+  const [circle1, setCircle1] = useState("rating-number");
+  const [circle2, setCircle2] = useState("rating-number");
+  const [circle3, setCircle3] = useState("rating-number");
+  const [circle4, setCircle4] = useState("rating-number");
+  const [circle5, setCircle5] = useState("rating-number");
+
+  const onClick1 = () => {
+    setCircle1("rating-number2")
+    setCircle2("rating-number")
+    setCircle3("rating-number")
+    setCircle4("rating-number")
+    setCircle5("rating-number")
+  }
+  const onClick2 = () => {
+    setCircle2("rating-number2")
+    setCircle1("rating-number")
+    setCircle3("rating-number")
+    setCircle4("rating-number")
+    setCircle5("rating-number")
+  }
+  const onClick3 = () => {
+    setCircle3("rating-number2")
+    setCircle2("rating-number")
+    setCircle1("rating-number")
+    setCircle4("rating-number")
+    setCircle5("rating-number")
+  }
+  const onClick4 = () => {
+    setCircle4("rating-number2")
+    setCircle2("rating-number")
+    setCircle3("rating-number")
+    setCircle1("rating-number")
+    setCircle5("rating-number")
+  }
+  const onClick5 = () => {
+    setCircle5("rating-number2")
+    setCircle2("rating-number")
+    setCircle3("rating-number")
+    setCircle4("rating-number")
+    setCircle1("rating-number")
+  }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="body">
+      <div className="rating-box">
+        <div className="rating-circle">
+          <img src={iconStar} style={{ height: 15, width: 15 }} alt="icon-star" />
+        </div>
+        <h1 className="heading">How did we do?</h1>
+        <p className="content">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+        <ul className="list-of-number">
+          <li className={circle1} onClick={onClick1}>1</li>
+          <li className={circle2} onClick={onClick2}>2</li>
+          <li className={circle3} onClick={onClick3}>3</li>
+          <li className={circle4} onClick={onClick4}>4</li>
+          <li className={circle5} onClick={onClick5}>5</li>
+        </ul>
+        <button>Submit</button>
+      </div>
     </div>
   )
 }
 
-export default App
+export default ratingPage
