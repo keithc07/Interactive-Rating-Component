@@ -24,9 +24,9 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot1](screenshot\screenshot1.png)
+![screenshot1](screenshot/screenshot1.png)
 
-![screenshot2](screenshot\screenshot2.png)
+![screenshot2](screenshot/screenshot2.png)
 
 ### Links
 
