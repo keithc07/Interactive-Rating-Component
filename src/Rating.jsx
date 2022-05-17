@@ -67,14 +67,14 @@ const RatingPage = () => {
   }
 
   return (
-    <main className="body">
-      <form role="form" className="rating-box" onSubmit={handleSubmit}>
+    <div id="root" className="body">
+      <form className="rating-box" onSubmit={handleSubmit}>
         <div className="rating-circle">
           <img src={iconStar} style={{ height: 15, width: 15 }} alt="icon-star" />
         </div>
         <p className="error-message">{error}</p>
         <h1 className="heading">How did we do?</h1>
-        <p role="content" className="content">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+        <p className="content">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
         <ul className="list-of-number">
           <li className={circle1} onClick={onClick1}>1</li>
           <li className={circle2} onClick={onClick2}>2</li>
@@ -84,7 +84,7 @@ const RatingPage = () => {
         </ul>
         <button type="submit" className="submit-button" >SUBMIT</button>
       </form>
-    </main>
+    </div>
   )
 }
 
