@@ -67,7 +67,7 @@ const RatingPage = () => {
   }
 
   return (
-    <div id="root" className="body">
+    <div id="root1" className="body">
       <form className="rating-box" onSubmit={handleSubmit}>
         <div className="rating-circle">
           <img src={iconStar} style={{ height: 15, width: 15 }} alt="icon-star" />
